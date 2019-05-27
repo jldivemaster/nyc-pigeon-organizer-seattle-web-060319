@@ -5,10 +5,9 @@ def nyc_pigeon_organizer(data)
   data.each do |trait, trait_hash|
     trait_hash.each do |k, arr|
       arr.each do |name|
-          new_arr = []
-          new_arr << k if (trait_hash[k]).include?(name)
-          new_trait_hash[trait] = new_arr.uniq
-        end
+        new_arr = []
+        new_arr << k if (trait_hash[k]).include?(name)
+        new_trait_hash[trait] = new_arr.uniq
 
         if !new_hash.has_key?(name)
           new_hash[name] = new_trait_hash
