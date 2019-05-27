@@ -8,8 +8,9 @@ def nyc_pigeon_organizer(data)
         new_arr = []
         if (trait_hash[k]).include?(name)
           new_arr << k.to_s
-          new_trait_hash[trait] = new_arr.uniq
         end
+
+        new_trait_hash[trait] = new_arr.uniq
 
         if !new_hash.has_key?(name)
           new_hash[name] = new_trait_hash
